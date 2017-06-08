@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div>
+    Userfeeds ID: <input type="text" id="address" value=""/><br>
+    <br/>
+    Title: <input type="text" id="title" value=""/><br>
+    Summary: <input type="text" id="summary" value=""/><br>
+    URL: <input type="text" id="url" value=""/><br>
+    <br/>
+    Value (in ETH): <input type="text" id="value" value=""/><br>
+    <br/>
+    <button onclick="send();">Post</button>
+  </div>
+
+  <script>
+    function send() {
+        let claim = {
+          "type": ["Ad"],
+          "claim": {
+            "target": document.getElementById('url').value,
+            "title": document.getElementById('title').value,
+            "summary": document.getElementById('summary').value,
+          },
+          "credits": [
+            {
+              "type": "interface",
+              "value": window.location.href
+            }
+          ]
+        };
+
+        let address = document.getElementById('address').value;
+        let value = document.getElementById('value').value;
+
+
+        let abi = [
+          {
+            "constant": false,
+            "inputs": [
+              {"name": "userfeed", "type": "address"},
+              { "name": "data", "type": "string"}
+            ],
+            "name": "post",
+            "outputs": [],
+            "payable": true,
+            "type": "function"
+          },
+          {
+            "anonymous": false,
+            "inputs": [
+              {"indexed": false, "name": "sender", "type": "address"},
+              {"indexed": false, "name": "userfeed", "type": "address"},
+              {"indexed": false, "name": "data", "type": "string"}
+            ],
+            "name": "Claim",
+            "type": "event"
+          }
+        ];
+
+        let contractAddress = '0x0a48ac8263d9d79768d10cf9d7e82a19c49f0002';
+        let contract = web3.eth.contract(abi).at(contractAddress);
+        contract.post(address, JSON.stringify(claim), {value: web3.toWei(value, 'ether')}, () => {
+            console.log('sent!');
+        });
+
+    }
+  </script>
+</body>
+</html>
