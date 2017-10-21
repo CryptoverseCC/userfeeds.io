@@ -1,0 +1,509 @@
+@import './style';
+
+.hero.is-userfeeds {
+  background-color: $userfeeds;
+  margin-bottom: 0;
+
+  .hero-body {
+    padding-bottom: 14rem;
+  }
+
+  .header-content-title {
+    margin-top: -.375rem;
+    margin-bottom: 4rem;
+  }
+
+  .header-content-subtitle {
+    color: rgba($white, .8);
+    font-weight: normal;
+  }
+
+  .default-text {
+    color: rgba($white, .8);
+    font-size: 1.25rem;
+  }
+}
+
+.userfeeds {
+  .is-size-1, .is-size-2, .is-size-3, .is-size-4, .is-size-5, .is-size-6 {
+    color: $userfeeds;
+  }
+
+  .default-text {
+    color: rgba($userfeeds, .8);
+  }
+}
+
+.userfeedsCases {
+  background-color: $userfeeds;
+  position: relative;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  &::after, &::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 50%;
+    z-index: 0;
+    bottom: 0;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    background-color: $white;
+  }
+
+  &::after {
+    top: 64rem;
+    right: 0;
+    background-color: #F9FAFC;
+  }
+
+  &-columns {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    border-radius: $radius-large;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+  }
+
+  &-content {
+    padding-right: 4rem;
+  }
+
+  &-each {
+    & + &{
+      margin-top: 6.25rem;
+    }
+
+    .default-title {
+      margin-bottom: 0;
+    }
+  }
+
+  .default-text {
+    margin-bottom: 4rem;
+  }
+
+  .media {
+
+    @include mobile {
+      flex-direction: column
+    }
+
+    & + .media {
+      margin-top: 6.25rem;
+      border-top: none;
+      padding-top: 0;
+    }
+  }
+
+  .media-left {
+    @include mobile {
+      margin-bottom: .75rem;
+    }
+
+    @include tablet {
+      width: 50%;
+    }
+
+    .image > img {
+      width: auto;
+    }
+  }
+
+  .media-content .is-size-4 {
+    font-weight: normal;
+    margin-bottom: 1rem;
+  }
+}
+
+.userfeedsIntro {
+  background-color: #F9FAFC;
+  overflow-x: hidden;
+
+  .default-title {
+    margin-bottom: 4rem;
+  }
+
+  .default-text {
+    position: relative;
+    z-index: 2;
+  }
+
+  &-embed {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    z-index: 1;
+
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 228px;
+      height: 228px;
+      transform: translate(50%, -50%);
+      background-image: url(/assets/images/dots.png);
+      z-index: 1;
+    }
+
+    &::before {
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 377px;
+      height: 520px;
+      transform: translate(-200px, -145px);
+      background-image: url(/assets/images/userfeeds-embed-bg.png);
+      z-index: 1;
+    }
+
+    > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      box-shadow: rgba($black, .25) 0 0 30px;
+    }
+  }
+}
+
+.userfeedsIntro, .userfeedsApp-columns {
+
+  .default-text {
+    font-size: 1.5rem;
+
+    a {
+      color: #09d57c;
+      font-weight: bold;
+
+      &:hover, &:focus {
+        color: darken(#09d57c, 10%);
+      }
+    }
+  }
+}
+
+.userfeedsQuote {
+  padding-bottom: 0 !important;
+  margin-bottom: -10rem;
+  position: relative;
+  z-index: 6;
+
+  .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .default-text {
+    font-size: 1.5rem;
+    max-width: 37.5rem;
+
+    @include mobile {
+      margin-bottom: 3rem;
+    }
+  }
+
+  @include mobile {
+
+    &-images {
+
+      > img {
+        display: block;
+        margin-bottom: 1.5rem;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  @include tablet {
+    &-images {
+      max-width: 60rem;
+      margin-top: 12rem;
+      position: relative;
+
+      > img {
+        width: 54%;
+        height: auto;
+      }
+
+      > .userfeedsQuote-img2 {
+        position: absolute;
+        right: 0;
+        top: -30%;
+      }
+    }
+  }
+}
+
+.userfeedsApp {
+  padding: 0 1.5rem !important;
+  position: relative;
+  z-index: 5;
+
+  &::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 50%;
+    right: 0;
+    z-index: 0;
+    background-color: #F9FAFC;
+    top: 0;
+    bottom: 0;
+  }
+
+  > .container {
+    z-index: 1;
+  }
+
+  &-columns {
+    border-radius: $radius-large 0 0 0;
+    background-color: #F9FAFC;
+    padding-top: 15rem;
+  }
+
+  &-item {
+    background-color: #F9FAFC;
+    padding-top: 8em;
+    padding-bottom: 8rem;
+
+    & + & {
+      padding-top: 2rem;
+    }
+
+    @include desktop {
+      .section-title {
+        padding-left: 2em;
+      }
+    }
+
+    .column {
+      position: relative;
+    }
+
+    .is-size-4 {
+      margin-top: .375rem;
+    }
+
+    .button {
+      font-weight: bold;
+      color: $blue;
+
+      @include touch {
+        margin-top: -1rem;
+        margin-bottom: 2rem;
+      }
+
+      @include desktop {
+        position: absolute;
+        top: .75rem;
+        right: 1.5rem + .75rem;
+      }
+    }
+  }
+}
+
+.userfeedsImage {
+  height: 50vw;
+  background-repeat: none;
+  background-position: bottom center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: calc((100% - #{$desktop} - 30px)/2);
+    right: 0;
+    z-index: 0;
+    background-color: $userfeeds;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+.userfeedsTeam {
+  background-color: $userfeeds;
+
+  &, .section-title{
+    color: $white;
+  }
+
+  &-content .column{
+    margin-bottom: 1rem;
+    color: $white;
+
+    @include desktop {
+      margin-bottom: 4rem;
+    }
+
+    > h3 {
+      margin-top: .375rem;
+      color: $white;
+    }
+  }
+}
+
+.userfeedsInvestors-images > img {
+  margin-bottom: 1rem;
+}
+
+.userfeedsLocation {
+  background-color: $white-bis;
+  position: relative;
+
+  @include mobile {
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+    padding-bottom: 0 !important;
+
+    &::after {
+      content: ' ';
+      display: block;
+      position: absolute;
+      width: calc((100% - #{$desktop} - 30px)/2);
+      right: 0;
+      z-index: 0;
+      background-color: $white;
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+  &-dl {
+    overflow: hidden;
+
+    > dt, > dd {
+      float: left;
+      margin-bottom: .375rem;
+    }
+
+    > dt {
+      clear: left;
+      width: 5rem;
+      padding-right: .5rem;
+      color: rgba($userfeeds, .6);
+    }
+
+    > dd {
+      color: $userfeeds;
+    }
+  }
+
+  @include mobile {
+    &-images {
+
+      > img {
+        display: block;
+        margin-bottom: 1.5rem;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  @include tablet {
+    &-images {
+      max-width: 60rem;
+      margin-top: 8rem;
+      padding-bottom: 20%;
+      position: relative;
+
+      > img {
+        width: 63%;
+        height: auto;
+      }
+
+      > .userfeedsLocation-img2 {
+        position: absolute;
+        right: 0;
+        top: 140px;
+      }
+    }
+  }
+
+  $directions-size: (80/16) * 1rem;
+
+  &-directions {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: $white;
+    border-radius: $radius-large;
+    box-shadow: rgba($darkblue, .1) 0 .625rem 2rem;
+    font-size: 1.5rem;
+    line-height: 1;
+    justify-content: space-between;
+    color: $userfeeds;
+    position: relative;
+    z-index: 3;
+    width: auto;
+    margin-top: 1rem;
+    align-items: stretch;
+
+    @include mobile {
+      font-size: 1.25rem;
+      margin-top: 0;
+    }
+
+    @include tablet {
+      position: absolute;
+      top: 1rem;
+      right: 0;
+    }
+
+    @include desktop {
+      right: -1rem;
+    }
+
+    > span {
+      display: block;
+      padding: 1em 1.25em;
+      white-space: nowrap;
+
+      > svg {
+        display: inline-block;
+        vertical-align: middle;
+        height: 1.5rem;
+        width: auto;
+        margin-top: -3px; // just a visual fix
+        margin-right: .5rem;
+      }
+    }
+
+    > i {
+      display: block;
+      text-align: center;
+      background-color: $blue;
+      color: $white;
+      border-radius: 0 $radius-large $radius-large 0;
+      padding: 1em 1.25em;
+    }
+  }
+}
+
+.globe {
+  position: absolute;
+  top: -30vh;
+  right: 0;
+  z-index: 2;
+
+  @include tablet {
+    right: -25%;
+  }
+}

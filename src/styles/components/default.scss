@@ -1,0 +1,20 @@
+.default {
+
+  > .container {
+    max-width: $desktop;
+  }
+}
+
+.default-title {
+  line-height: 1.2;
+  letter-spacing: $headlines-letter-spacing;
+  margin-bottom: 2rem;
+
+  &.is-size-1, &.is-size-2 {
+    margin-top: -0.15em; // to remove parents' padding
+  }
+}
+
+.default-text {
+  color: $text-light;
+}

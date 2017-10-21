@@ -1,0 +1,23 @@
+.bullets {
+
+  > .column {
+    margin-top: 4rem;
+  }
+
+  .bullets-title {
+    font-weight: bold;
+    margin-bottom: .625rem;
+  }
+
+  .icon {
+    border-radius: $radius-large;
+    background-color: $darkblue;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    > svg {
+      width: 1rem;
+      height: auto;
+    }
+  }
+}

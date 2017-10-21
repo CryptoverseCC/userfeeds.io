@@ -1,0 +1,43 @@
+// 1. Import the initial variables
+@import "~bulma/sass/utilities/initial-variables";
+
+// 2. Overrides of those variables
+$blue: #263fff;
+$darkblue: #1d2435;
+
+$primary: $blue;
+$text: rgba($darkblue, .8);
+$text-light: rgba($darkblue, .6);
+
+$home: $blue;
+$advertisers: #4ab4fc;
+$publishers: #6673ea;
+$tokenholders: #06bb6c;
+$userfeeds: #0f131d;
+
+$headlines-letter-spacing: 0.02em;
+
+// .tk-pt-sans
+$family-sans-serif: pt-sans, BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$family-headlines: Aller, BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+// .tk-aller
+.is-size-1, .is-size-2, .is-size-3, .is-size-4 {
+  font-family: $family-headlines;
+}
+
+.is-size-1, .is-size-2, .is-size-3, .is-size-4, .is-size-5, .is-size-6 {
+  font-weight: bold;
+  color: $darkblue;
+}
+
+// 3. Import the rest of Bulma
+@import "~bulma/bulma";
+
+// 4. Import other views & components
+@import "common";
+
+@import "components/default";
+@import "components/header";
+@import "components/footer";
+@import "components/bullets";

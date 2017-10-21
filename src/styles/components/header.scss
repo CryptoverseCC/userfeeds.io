@@ -1,0 +1,117 @@
+.hero {
+  position: relative;
+  z-index: 2;
+
+  .container {
+    max-width: $desktop;
+  }
+}
+
+.hero-head {
+
+  .navbar {
+    background-color: transparent;
+
+    > .container, .navbar-brand {
+      min-height: 2.25rem;
+    }
+
+    @include desktop {
+      padding: 2rem 0;
+
+      .navbar-brand {
+        margin-left: -1rem;
+      }
+    }
+  }
+
+  .navbar-item {
+    transition: all $speed $easing;
+
+    &:hover, &:focus, &.is-active {
+      background-color: rgba($white, .15);
+    }
+
+    &.is-active {
+      font-weight: bold;
+    }
+
+    @include desktop {
+      &.is-userfeeds {
+        border-left: 1px solid rgba($white, .5);
+        margin-left: 1rem;
+
+        > .rarr {
+          transform: rotate(-45deg);
+        }
+
+        &:hover, &:focus {
+          border-left-color: transparent;
+
+          > .rarr {
+            transform: rotate(0);
+          }
+        }
+      }
+    }
+  }
+
+  @include touch {
+    .navbar-menu {
+      background-color: transparent;
+      border-bottom: 1px solid rgba($white, .15);
+
+      .navbar-item {
+        &:hover, &:focus, &.is-active {
+          background-color: rgba($white, .15);
+        }
+      }
+    }
+  }
+}
+
+.hero-body {
+
+  .section-title {
+    color: $white;
+  }
+
+  .header-image {
+    @media (max-width: 599px){
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 600px){
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(30px, -50%);
+      z-index: 1;
+    }
+  }
+
+  .header-content {
+
+    &-wrap {
+      position: relative;
+      z-index: 2;
+
+      @media (min-width: 600px){
+        margin-right: 355px;
+      }
+    }
+
+    &-title {
+      line-height: 1.25;
+      margin-bottom: 2rem;
+      max-width: 40rem;
+      color: $white;
+    }
+
+    &-subtitle {
+      font-weight: normal;
+      max-width: 30rem;
+      color: $white;
+    }
+  }
+}

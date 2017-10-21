@@ -1,0 +1,90 @@
+body {
+  overflow-x: hidden;
+}
+
+.main {
+  background-color: #fff;
+  position: relative;
+  z-index: 3;
+}
+
+// SECTION'S TITLES
+.section-title {
+  opacity: 0.8;
+  font-size: .75rem;
+  line-height: 3;
+  letter-spacing: $headlines-letter-spacing;
+  text-transform: uppercase;
+  text-align: left;
+  color: $darkblue;
+  margin: 0;
+
+  > b {
+    display: inline-block;
+    width: 45px;
+    height: 0;
+    border-top: 2px solid;
+    margin: -2px .25em 0 .25em;
+    vertical-align: middle;
+    opacity: .5;
+  }
+}
+
+// SVG COLORS
+.svg-blue {
+  fill: $blue;
+}
+
+.svg-darkblue {
+  fill: $darkblue;
+}
+
+.svg-white {
+  fill: $white;
+}
+
+.svg-green {
+  fill: $green;
+}
+
+.svg-red {
+  fill: $red;
+}
+
+.svg-publishers {
+  fill: $publishers;
+}
+
+.svg-tokenholders {
+  fill: $tokenholders;
+}
+
+.svg-advertisers {
+  fill: $advertisers;
+}
+
+// Button size
+.button-lg {
+  height: 3.75em;
+  padding: (3.75em - 1.5em)/2 1.5em;
+}
+
+// arrow
+.rarr {
+  font-style: normal;
+  transition: transform $speed $easing;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: .25em;
+
+  &::before {
+    content: '\2192';
+  }
+}
+
+// scrollreveal
+.sr .anim {
+  &-fade, &-fadeBottom, &-fadeTop, &-fadeLeft, &-fadeRight, &-frontToBack, &-backToFront {
+      visibility: hidden;
+  }
+}

@@ -1,0 +1,268 @@
+$footer-height: 16rem;
+
+.footer {
+  background-color: transparent;
+  padding: 0 0 $footer-height;
+  position: relative;
+  z-index: 1;
+
+  &-top {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    position: relative;
+    z-index: 2;
+
+    > .container {
+      max-width: $desktop;
+    }
+
+    .columns {
+      background-color: $white-bis;
+      padding: 6.25rem 4.25rem;
+
+      @include mobile {
+        padding: 3rem 2rem;
+      }
+    }
+
+    .icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      align-items: flex-end;
+      margin-bottom: 1.5rem;
+
+      > svg {
+        width: 2.25rem;
+        height: auto;
+      }
+    }
+
+    .is-whitepaper .icon {
+      opacity: .35;
+    }
+
+    .is-size-4 {
+      line-height: 1.15;
+      margin-top: 0;
+      margin-bottom: .75em;
+      font-weight: normal;
+    }
+
+    @include mobile {
+      .column + .column {
+        margin-top: 2rem;
+      }
+    }
+
+    @include desktop {
+      .column.is-whitepaper {
+        padding-right: 4rem;
+      }
+
+      .column.is-poweredby {
+        padding-left: 4rem;
+      }
+    }
+  }
+
+  &-content {
+    background-color: #0f131d;
+    padding: 2 * 6.25rem 1.5rem (2 * 6.25rem - 0.75rem);
+    border-bottom: 1px solid rgba($white, 0.1);
+    color: $white;
+    position: relative;
+    z-index: 1;
+
+    @include mobile {
+      padding: 4rem 1.5rem;
+    }
+
+    @include desktop {
+      margin-top: -6.25rem;
+    }
+
+    &::before {
+      content: ' ';
+      display: block;
+      width: 110px;
+      height: 91px;
+      background-image: url(/assets/images/footer-img.png);
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+    }
+
+    > .container {
+      max-width: $desktop;
+    }
+
+    .is-size-3 {
+      color: $white;
+      margin-bottom: 4rem;
+    }
+
+    .column > p {
+      margin-bottom: 1.5rem;
+    }
+
+    .input {
+      height: 3.75em;
+      padding: calc((3.75em - 1.5em)/2 - 1px) calc(1.5em - 1px);
+      background-color: rgba($white, 0.07);
+      border-color: transparent;
+      color: $white;
+
+      &::placeholder {
+        color: #a6aeb8;
+      }
+    }
+
+    .button {
+      font-weight: bold;
+      color: $darkblue;
+
+      &.is-outlined {
+        background-color: transparent;
+        color: $white;
+      }
+
+      &:hover, &:focus {
+        > .rarr {
+          transform: translateX(.25em)
+        }
+      }
+    }
+  }
+
+  &-bottom {
+    background-color: #0f131d;
+    color: $white;
+    padding: 4rem 1.5rem;
+
+    height: $footer-height;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    > .container {
+      max-width: $desktop;
+    }
+
+    .level {
+      align-items: flex-start;
+    }
+
+    .level-left {
+      margin-right: 1rem;
+
+      > svg {
+        opacity: .2;
+        width: 6.25rem;
+        height: auto;
+
+        @media (max-width: 480px) {
+          width: 3rem;
+        }
+      }
+    }
+
+    .level-right {
+      align-items: stretch;
+    }
+
+    .level-item {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: relative;
+      min-width: 8rem;
+
+      @include tablet {
+        + .level-item{
+          margin-left: 2rem;
+        }
+      }
+
+      > ul > li{
+
+        + li {
+          margin-top: .375rem;
+        }
+
+        > a {
+          color: #87898e;
+          text-decoration: none;
+
+          &:hover, &:focus {
+            color: $white;
+          }
+        }
+      }
+    }
+
+    &-title {
+      color: $white !important;
+      margin-bottom: 1rem;
+
+      > a {
+        color: $white;
+
+        > .rarr {
+          transform: rotate(-45deg);
+        }
+
+        &:hover, &:focus {
+          > .rarr {
+            transform: rotate(0);
+          }
+        }
+      }
+    }
+  }
+
+  &-social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    opacity: .5;
+    width: 100%;
+    max-width: 5rem;
+    margin-top: 1rem;
+
+    @include tablet {
+      position: absolute;
+      bottom: .25em;
+      left: 0;
+    }
+
+    .icon {
+      width: 1rem;
+      height: 1rem;
+
+      > svg {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.footer.is-about .footer-content {
+  padding-top: 8.75rem;
+}
+
+// color overwritten
+.footer.is-userfeeds {
+  &::before {
+    display: none;
+  }
+
+  .footer-content {
+    margin-top: 0;
+
+    .is-size-3 {
+      color: $white;
+    }
+  }
+}
