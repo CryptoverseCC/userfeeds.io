@@ -14,7 +14,6 @@ export function initThree() {
   document.getElementById('ThreeJS').appendChild(renderer.domElement);
 
   scene = new THREE.Scene();
-  scene.fog = new THREE.Fog(0x0F131D, 1, 1000);
 
   camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 1, 10000);
   camera.position.z = 820;
@@ -29,7 +28,7 @@ export function initThree() {
 
   var geom = new THREE.IcosahedronGeometry(15, 2);
   var bones = new THREE.MeshPhongMaterial({
-    color: 0x3F424A,
+    color: 0x4D515B,
     wireframe: true,
     side: THREE.DoubleSide
   });
@@ -52,8 +51,8 @@ export function animate() {
   requestAnimationFrame(animate);
 
   skelet.rotation.z -= .001;
-  skelet.rotation.y = 0;
-  skelet.rotation.x = 0;
+  skelet.rotation.y += .0005;
+  skelet.rotation.x -= .0007;
   renderer.clear();
 
   renderer.render( scene, camera );
