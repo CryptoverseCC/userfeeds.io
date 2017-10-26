@@ -254,9 +254,6 @@ $footer-height: 16rem;
 
 // color overwritten
 .footer.is-userfeeds {
-  &::before {
-    display: none;
-  }
 
   .footer-content {
     margin-top: 0;
