@@ -245,7 +245,7 @@
 .userfeedsIntro, .userfeedsExamples, .userfeedsApp-columns {
 
   overflow: hidden; 
-  
+
   .default-text {
     font-size: 1.5rem;
 
@@ -402,6 +402,26 @@
 
 .userfeedsTeam {
   background-color: $userfeeds;
+
+  &-social {
+    display: flex;
+    flex-direction: row;
+    opacity: .5;
+    width: 100%;
+    margin-top: 1.2rem;
+
+    .icon {
+      width: 1rem;
+      height: 1rem;
+      margin-right:1rem;
+
+      > svg {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
 
   &, .section-title{
     color: $white;
