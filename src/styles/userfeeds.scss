@@ -507,3 +507,484 @@
     right: -25%;
   }
 }
+
+
+@keyframes thirdPosition {
+  0% {
+    transform: scale(0.9) translateY(95px);
+  }
+
+  10% {
+    transform: scale(1.1) translateY(0px);
+  }
+
+  30% {
+    transform: scale(0.9) translateY(0px);
+  }
+
+  50% {
+    transform: scale(1.1) translateY(47px);
+  }
+ 
+  70% {
+    transform:scale(0.9) translateY(47px);
+  }
+
+  90% {
+    transform:scale(1.1) translateY(95px);
+  }
+
+  100% {
+    transform:scale(0.9) translateY(95px);
+  }
+}
+
+@keyframes secondPosition {
+  0% {
+    transform: scale(0.9) translateY(47px);
+  }
+
+  20% {
+    transform: scale(1.1) translateY(95px);
+  }
+
+  40% {
+    transform: scale(0.9) translateY(95px);
+  }
+
+  60% {
+    transform: scale(1.1) translateY(0px);
+  }
+ 
+  70% {
+    transform:scale(0.9) translateY(0px);
+  }
+
+  90% {
+    transform:scale(1.1) translateY(47px);
+  }
+
+  100% {
+    transform:scale(0.9) translateY(47px);
+  }
+}
+
+
+@keyframes firstPosition {
+  0% {
+    transform: scale(0.9) translateY(0px);
+  }
+
+  20% {
+    transform: scale(1.1) translateY(47px);
+  }
+
+  40% {
+    transform: scale(0.9) translateY(47px);
+  }
+
+  60% {
+    transform: scale(1.1) translateY(95px);
+  }
+ 
+  80% {
+    transform:scale(0.9) translateY(95px);
+  }
+
+  90% {
+    transform:scale(1.1) translateY(0px);
+  }
+
+  100% {
+    transform:scale(0.9) translateY(0px);
+  }
+}
+
+
+@keyframes claimsRobot {
+  0% {
+    transform: scale(0.9);
+  }
+
+  10% {
+    transform: scale(1.15);
+  }
+
+  20% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform:scale(0.9);
+  }
+}
+
+@keyframes claimsLink {
+  0% {
+    transform: scale(0.9);
+  }
+
+  10% {
+    transform: scale(0.9);
+  }
+
+  20% {
+    transform: scale(1.2);
+  }
+
+  30% {
+    transform:scale(0.9);
+  }
+
+  100% {
+    transform:scale(0.9);
+  }
+}
+
+@keyframes claimsWidget {
+  0% {
+    transform: scale(1);
+  }
+
+  15% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.15);
+  }
+
+  35% {
+    transform:scale(1);
+  }
+
+  100% {
+    transform:scale(1);
+  }
+}
+
+@keyframes votingFourth {
+  0% {
+    transform: scale(0.9);
+  }
+
+  20% {
+    transform: scale(0.9);
+  }
+
+  30% {
+    transform: scale(1.15);
+  }
+
+  40% {
+    transform:scale(0.9);
+  }
+
+  100% {
+    transform:scale(0.9);
+  }
+}
+
+
+@keyframes firstMan {
+  0% {
+    transform: translate(12px,83px);
+  }
+
+  50% {
+    transform: translate(12px,79px);
+  }
+
+  100% {
+    transform: translate(12px,83px);
+  }
+}
+
+@keyframes secondMan {
+  0% {
+    transform: translate(130px,8px);
+  }
+
+  50% {
+    transform: translate(130px,12px);
+  }
+
+  100% {
+    transform: translate(130px,8px);
+  }
+}
+
+
+@keyframes thirdMan {
+  0% {
+    transform: translate(122px,82px);
+  }
+
+  50% {
+    transform: translate(122px,77px);
+  }
+
+  100% {
+    transform: translate(122px,82px);
+  }
+}
+
+@keyframes fourthMan {
+  0% {
+    transform: translate(2px,4px);
+  }
+
+  50% {
+    transform: translate(2px,0px);
+  }
+
+  100% {
+    transform: translate(2px,4px);
+  }
+}
+
+
+@keyframes firstNetwork {
+  0% {
+    transform: translate(0px,94px);
+  }
+
+  50% {
+    transform: translate(0px,100px);
+  }
+
+  100% {
+    transform: translate(0px,94px);
+  }
+}
+
+
+@keyframes secondNetwork {
+  0% {
+    transform: translate(152px,8px);
+  }
+
+  50% {
+    transform: translate(152px,13px);
+  }
+
+  100% {
+    transform: translate(152px,8px);
+  }
+}
+
+@keyframes thirdNetwork {
+  0% {
+    transform: translate(155px,98px);
+  }
+
+  50% {
+    transform: translate(155px,93px);
+  }
+
+  100% {
+    transform: translate(155px,98px);
+  }
+}
+
+@keyframes fourthNetwork {
+  0% {
+    transform: translate(0px,0px);
+  }
+
+  50% {
+    transform: translate(0px,4px);
+  }
+
+  100% {
+    transform: translate(0px,0px);
+  }
+}
+
+@keyframes redditFirst {
+  0% {
+    transform: scale(0.8);
+  }
+
+  20% {
+    transform: scale(1.1);
+  }
+  40% {
+    transform:scale(0.8);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+@keyframes redditSecond {
+  0% {
+    transform: scale(0.8);
+  }
+
+  10% {
+    transform: scale(0.8);
+  }
+  30% {
+    transform:scale(1.1);
+  }
+  50% {
+    transform:scale(0.8);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+@keyframes redditThird {
+  0% {
+    transform: scale(0.8);
+  }
+
+  20% {
+    transform: scale(0.8);
+  }
+  40% {
+    transform:scale(1.1);
+  }
+  60% {
+    transform:scale(0.8);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+@keyframes redditWidget {
+  0% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1);
+  }
+  50% {
+    transform:scale(1.1);
+  }
+  70% {
+    transform:scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+#firstMan {
+  transform-origin:50% 50%;
+  animation: firstMan 3s ease infinite;
+}
+
+#secondMan {
+  transform-origin:50% 50%;
+  animation: secondMan 3s ease infinite;
+}
+
+#thirdMan {
+  transform-origin:50% 50%;
+  animation: thirdMan 3s ease infinite;
+}
+
+#fourthMan {
+  transform-origin:50% 50%;
+  animation: fourthMan 3s ease infinite;
+}
+
+#thirdPosition { 
+  transform-origin:50% 50%;
+  animation: thirdPosition 6s ease infinite; }
+
+#secondPosition { 
+  transform-origin:50% 50%;
+  animation: secondPosition 6s ease infinite; }
+
+#firstPosition { 
+  transform-origin:50% 50%;
+  animation: firstPosition 6s ease infinite; }
+
+
+#claimsRobot { 
+  transform-origin:50% 50%;
+  animation: claimsRobot 3s ease infinite; }
+
+#claimsLink { 
+  transform-origin:50% 50%;
+  animation: claimsLink 3s ease infinite; }
+
+#claimsWidget { 
+  transform-origin:50% 50%;
+  animation: claimsWidget 3s ease infinite; }
+
+#girlOval {
+  transform-origin:50% 50%;
+  animation:claimsWidget 6s ease infinite;
+}
+
+
+#votingFirst { 
+  transform-origin:50% 50%;
+  animation: claimsRobot 3s ease infinite; }
+
+#votingSecond { 
+  transform-origin:50% 50%;
+  animation: claimsLink 3s ease infinite; }
+
+#votingThird { 
+  transform-origin:50% 50%;
+  animation: claimsWidget 3s ease infinite; }
+
+
+#votingFourth { 
+  transform-origin:50% 50%;
+  animation: votingFourth 3s ease infinite; }
+
+#firstNetwork {
+  transform-origin:50% 50%;
+  animation:firstNetwork 3s ease infinite;
+}
+
+#secondNetwork {
+  transform-origin:50% 50%;
+  animation:secondNetwork 3s ease infinite;
+}
+
+#thirdNetwork {
+  transform-origin:50% 50%;
+  animation:thirdNetwork 3s ease infinite;
+}
+
+#fourthNetwork {
+  transform-origin:50% 50%;
+  animation:fourthNetwork 3s ease infinite;
+}
+
+#redditFirst{
+  transform-origin:50% 50%;
+  animation:redditFirst 3s ease infinite;
+}
+
+#redditSecond{
+  transform-origin:50% 50%;
+  animation:redditSecond 3s ease infinite;
+}
+
+#redditThird{
+  transform-origin:50% 50%;
+  animation:redditThird 3s ease infinite;
+}
+
+#redditWidget{
+  transform-origin:50% 50%;
+  animation:redditWidget 3s ease infinite;
+}
