@@ -376,25 +376,12 @@
         right: 0;
         top: -30%;
       }
-
-      > .userfeedsQuote-img3 {
-        position: absolute;
-        right: 0;
-        top: 70%;
-      }
-
-      > .userfeedsQuote-img4 {
-        position: absolute;
-        display:none;
-        left: 0;
-        top: 40%;
-      }
-
     }
   }
 }
 
 .userfeedsExamples {
+  padding-bottom: 0 !important;
   position: relative;
   z-index: 5;
 
@@ -402,6 +389,14 @@
     color: $white;
   }
 
+  &-figure {
+    margin-top: 4rem;
+    margin-bottom: -132px;
+
+    @include tablet {
+      transform: translateX(-20px); // px because it's dependant on image
+    }
+  }
 
 
   &::after {
@@ -426,7 +421,7 @@
   }
 
   &-item {
-    padding-top: 4em;
+    padding-top: 8em;
     
 
     & + & {
@@ -459,8 +454,9 @@
       }
 
       @include desktop {
-        position: relative;
+        position: absolute;
         top: .75rem;
+        right: 1.5rem + .75rem;
       }
     }
   }
@@ -1181,142 +1177,4 @@
 #contentWhitepaper{
   transform-origin:50% 50%;
   animation:contentWhitepaper 3s ease infinite;
-}
-
-
-@keyframes up {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(25px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-
-@keyframes down {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-8px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-
-
-@keyframes eth1 {
-  0% {
-    transform: translateY(15px);
-  }
-
-  50% {
-    transform: translateY(20px);
-  }
-
-  100% {
-    transform: translateY(15px);
-  }
-}
-
-
-@keyframes eth2 {
-  0% {
-    transform: translateY(80px) translateX(20px);
-  }
-
-  50% {
-    transform: translateY(90px) translateX(20px);
-  }
-
-  100% {
-    transform: translateY(80px) translateX(20px);
-  }
-}
-
-@keyframes eth3 {
-  0% {
-    transform: translateY(30px) translateX(260px);
-  }
-
-  50% {
-    transform: translateY(10px) translateX(260px);
-  }
-
-  100% {
-    transform: translateY(30px) translateX(260px);
-  }
-}
-
-@keyframes first {
-  0% {
-    transform: translateY(170px) translateX(230px);
-  }
-
-  50% {
-    transform: translateY(175px) translateX(230px);
-  }
-
-  100% {
-    transform: translateY(170px) translateX(230px);
-  }
-}
-
-
-
-@keyframes scale {
-  0% {
-    transform: scale(0.8);
-  }
-
-  50% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(0.8);
-  }
-}
-
-
-
-#up { animation: up 4s ease infinite; }
-#bottom { animation: down 3s ease infinite; }
-#ethIcon1 {animation:eth1 5s ease infinite;}
-#ethIcon2 {animation:eth2 5s ease infinite;}
-#ethIcon3 {animation:eth3 4s ease infinite;}
-#first {animation:first 4s ease infinite;}
-
-#shadow {
-  opacity:0.7;
-  transform-origin: 50% 50%;
-  animation: scale 4s ease infinite;
-}
-
-#shadow-manual {
-  opacity:0.3;
-  transform-origin: 50% 50%;
-  animation: scale 3s ease infinite;
-}
-
-#main {
-  animation:down 3s ease infinite;
-}
-
-#rectangular {
-  animation:down 3s ease infinite;
-}
-
-#play {
-  animation:down 3s ease infinite;
 }
